@@ -1,0 +1,2208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Voluntariado · Construyendo mi futuro universitario — Guía de ingreso a la USAC</title>
+<meta name="description" content="Guía interactiva de pasos para el ingreso a la Universidad de San Carlos de Guatemala (USAC). Ejercicio Profesional Supervisado, Facultad de Humanidades.">
+<style>
+  :root{
+    --ocre:#A9702B;
+    --ocre-claro:#C98F45;
+    --ocre-oscuro:#7A4E1B;
+    --negro:#000000;
+    --oliva:#5C6B2E;
+    --oliva-oscuro:#3F4A1F;
+    --beige:#F3EADA;
+    --beige-2:#E6D9C0;
+    --blanco:#FFFCF6;
+    --gris:#242424;
+    --sombra:0 8px 26px rgba(0,0,0,.14);
+    --radio:16px;
+  }
+
+  *{box-sizing:border-box}
+
+  html{
+    scroll-behavior:smooth;
+    scroll-padding-top:88px;
+  }
+
+  body{
+    margin:0;
+    background:var(--beige);
+    color:var(--negro);
+    font-family:"Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  h1,h2,h3,h4{
+    font-family:Georgia,"Times New Roman",serif;
+    line-height:1.2;
+    margin:0 0 .6rem;
+  }
+
+  p{margin:0 0 1rem}
+
+  a{color:var(--ocre-oscuro)}
+  a:hover{color:var(--negro)}
+
+  img{max-width:100%}
+
+  .contenedor{
+    width:min(1120px, 100%);
+    margin:0 auto;
+    padding:0 1.25rem;
+  }
+
+  /* ============ ENCABEZADO ============ */
+  .encabezado{
+    position:sticky;
+    top:0;
+    z-index:200;
+    background:var(--negro);
+    border-bottom:4px solid var(--ocre);
+  }
+
+  .barra{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    padding:.65rem 1.25rem;
+    width:min(1120px,100%);
+    margin:0 auto;
+  }
+
+  .marca{
+    display:flex;
+    align-items:center;
+    gap:.6rem;
+    color:var(--beige);
+    font-weight:700;
+    letter-spacing:.4px;
+    font-size:.95rem;
+    text-decoration:none;
+  }
+
+  .marca .punto{
+    width:14px;height:14px;border-radius:50%;
+    background:var(--ocre);
+    box-shadow:0 0 0 4px rgba(169,112,43,.25);
+    flex:none;
+  }
+
+  .marca small{
+    display:block;
+    font-weight:400;
+    font-size:.7rem;
+    letter-spacing:1.4px;
+    text-transform:uppercase;
+    color:var(--ocre-claro);
+  }
+
+  .nav-lista{
+    display:flex;
+    align-items:center;
+    gap:.15rem;
+    list-style:none;
+    margin:0;
+    padding:0;
+    flex-wrap:wrap;
+  }
+
+  .nav-lista a{
+    display:block;
+    color:var(--beige);
+    text-decoration:none;
+    font-size:.85rem;
+    font-weight:600;
+    padding:.45rem .6rem;
+    border-radius:8px;
+    transition:.2s;
+    white-space:nowrap;
+  }
+
+  .nav-lista a:hover,
+  .nav-lista a:focus-visible{
+    background:var(--oliva);
+    color:var(--blanco);
+    outline:none;
+  }
+
+  .btn-menu{
+    display:none;
+    background:transparent;
+    border:2px solid var(--ocre);
+    color:var(--beige);
+    border-radius:10px;
+    padding:.4rem .6rem;
+    font-size:1.1rem;
+    cursor:pointer;
+    line-height:1;
+  }
+
+  .btn-menu:hover{background:var(--ocre);color:var(--negro)}
+
+  /* ============ PORTADA ============ */
+  .portada{
+    background:
+      radial-gradient(1200px 500px at 85% -10%, rgba(92,107,46,.20), transparent 60%),
+      linear-gradient(180deg, var(--blanco) 0%, var(--beige) 100%);
+    border-bottom:6px solid var(--negro);
+    padding:3.5rem 0 3rem;
+    position:relative;
+    overflow:hidden;
+  }
+
+  .portada::after{
+    content:"";
+    position:absolute;
+    right:-90px;bottom:-90px;
+    width:260px;height:260px;
+    border-radius:50%;
+    background:var(--oliva);
+    opacity:.12;
+  }
+
+  .etiqueta{
+    display:inline-flex;
+    align-items:center;
+    gap:.5rem;
+    background:var(--negro);
+    color:var(--beige);
+    font-size:.72rem;
+    font-weight:700;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    padding:.4rem .9rem;
+    border-radius:999px;
+    margin-bottom:1.2rem;
+  }
+
+  .etiqueta .punto{width:8px;height:8px;border-radius:50%;background:var(--ocre)}
+
+  .portada h1{
+    font-size:clamp(2.1rem, 6vw, 3.6rem);
+    color:var(--negro);
+    margin-bottom:.4rem;
+  }
+
+  .portada h1 span{color:var(--ocre-oscuro);display:block}
+
+  .portada .subtitulo{
+    font-size:clamp(1rem, 2.4vw, 1.2rem);
+    max-width:62ch;
+    color:var(--gris);
+  }
+
+  .portada .institucion{
+    margin-top:1.6rem;
+    border-left:5px solid var(--oliva);
+    padding-left:1rem;
+    font-size:.92rem;
+    color:var(--gris);
+  }
+
+  .portada .institucion strong{color:var(--negro)}
+
+  .acciones-portada{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.75rem;
+    margin-top:2rem;
+  }
+
+  /* ============ BOTONES ============ */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:.5rem;
+    border:2px solid transparent;
+    border-radius:999px;
+    padding:.72rem 1.35rem;
+    font-family:inherit;
+    font-size:.92rem;
+    font-weight:700;
+    cursor:pointer;
+    text-decoration:none;
+    transition:transform .18s ease, background .18s ease, color .18s ease, border-color .18s ease;
+    line-height:1.2;
+  }
+
+  .btn:active{transform:scale(.97)}
+
+  .btn:focus-visible{outline:3px solid var(--oliva);outline-offset:2px}
+
+  .btn-primario{background:var(--ocre);color:var(--negro)}
+  .btn-primario:hover{background:var(--negro);color:var(--beige)}
+
+  .btn-oscuro{background:var(--negro);color:var(--beige)}
+  .btn-oscuro:hover{background:var(--oliva);color:var(--blanco)}
+
+  .btn-oliva{background:var(--oliva);color:var(--blanco)}
+  .btn-oliva:hover{background:var(--negro);color:var(--beige)}
+
+  .btn-borde{background:transparent;color:var(--negro);border-color:var(--negro)}
+  .btn-borde:hover{background:var(--negro);color:var(--beige)}
+
+  .btn-claro{background:transparent;color:var(--beige);border-color:var(--beige)}
+  .btn-claro:hover{background:var(--beige);color:var(--negro)}
+
+  .btn-sm{padding:.42rem .85rem;font-size:.8rem}
+
+  /* ============ SECCIONES ============ */
+  .bloque{padding:3.4rem 0;border-bottom:1px solid rgba(0,0,0,.10)}
+  .bloque--blanco{background:var(--blanco)}
+  .bloque--negro{background:var(--negro);color:var(--beige)}
+  .bloque--negro h2,.bloque--negro h3{color:var(--blanco)}
+  .bloque--oliva{background:var(--oliva);color:var(--blanco)}
+  .bloque--oliva h2{color:var(--blanco)}
+
+  .titulo-seccion{
+    font-size:clamp(1.5rem, 3.6vw, 2.1rem);
+    margin-bottom:.35rem;
+  }
+
+  .titulo-seccion .num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;height:38px;
+    border-radius:50%;
+    background:var(--ocre);
+    color:var(--negro);
+    font-size:1rem;
+    font-weight:700;
+    margin-right:.6rem;
+    font-family:"Segoe UI",sans-serif;
+    vertical-align:middle;
+  }
+
+  .antetitulo{
+    display:block;
+    font-size:.72rem;
+    font-weight:800;
+    letter-spacing:2.4px;
+    text-transform:uppercase;
+    color:var(--ocre-oscuro);
+    margin-bottom:.35rem;
+  }
+
+  .bloque--negro .antetitulo{color:var(--ocre-claro)}
+  .bloque--oliva .antetitulo{color:var(--beige-2)}
+
+  .bajada{max-width:70ch;font-size:1.02rem;color:var(--gris)}
+  .bloque--negro .bajada{color:var(--beige-2)}
+  .bloque--oliva .bajada{color:var(--beige)}
+
+  /* ============ TARJETAS ============ */
+  .rejilla{display:grid;gap:1.1rem}
+  .rejilla--2{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+  .rejilla--3{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+
+  .tarjeta{
+    background:var(--blanco);
+    border:1px solid rgba(0,0,0,.10);
+    border-radius:var(--radio);
+    padding:1.4rem;
+    box-shadow:var(--sombra);
+    transition:transform .2s ease, border-color .2s ease;
+  }
+
+  .tarjeta:hover{transform:translateY(-3px);border-color:var(--ocre)}
+
+  .tarjeta h3{font-size:1.08rem;margin-bottom:.4rem}
+  .tarjeta p:last-child{margin-bottom:0}
+
+  /* Tarjetas de fase (botones) */
+  .fase-card{
+    display:block;
+    width:100%;
+    text-align:left;
+    font-family:inherit;
+    font-size:1rem;
+    background:var(--blanco);
+    color:var(--negro);
+    border:2px solid rgba(0,0,0,.12);
+    border-radius:var(--radio);
+    padding:1.4rem 1.4rem 1.2rem;
+    cursor:pointer;
+    position:relative;
+    transition:.22s;
+    box-shadow:var(--sombra);
+  }
+
+  .fase-card:hover,
+  .fase-card:focus-visible{
+    border-color:var(--ocre);
+    background:#fff;
+    transform:translateY(-4px);
+    outline:none;
+  }
+
+  .fase-card .fase-num{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:44px;height:44px;
+    border-radius:14px;
+    background:var(--oliva);
+    color:var(--blanco);
+    font-weight:800;
+    font-size:1.15rem;
+    margin-bottom:.8rem;
+  }
+
+  .fase-card h3{font-size:1.05rem}
+  .fase-card p{font-size:.9rem;color:var(--gris);margin-bottom:.9rem}
+
+  .fase-card .ver{
+    font-size:.78rem;
+    font-weight:800;
+    letter-spacing:1.2px;
+    text-transform:uppercase;
+    color:var(--ocre-oscuro);
+  }
+
+  /* ============ PROGRESO ============ */
+  .progreso-caja{
+    background:var(--blanco);
+    border:2px dashed var(--ocre);
+    border-radius:var(--radio);
+    padding:1.4rem;
+    margin-top:1.8rem;
+  }
+
+  .barra-exterior{
+    height:14px;
+    background:var(--beige-2);
+    border-radius:999px;
+    overflow:hidden;
+    margin:.6rem 0 .5rem;
+  }
+
+  .barra-interior{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg, var(--oliva), var(--ocre));
+    border-radius:999px;
+    transition:width .4s ease;
+  }
+
+  .lista-check{
+    list-style:none;
+    margin:1rem 0 0;
+    padding:0;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:.4rem;
+  }
+
+  .lista-check li{display:flex;align-items:flex-start;gap:.6rem;font-size:.93rem}
+
+  .lista-check input[type="checkbox"]{
+    width:19px;height:19px;
+    accent-color:var(--oliva);
+    margin-top:.22rem;
+    cursor:pointer;
+    flex:none;
+  }
+
+  .lista-check label{cursor:pointer}
+
+  .lista-check input:checked + label{
+    color:var(--oliva-oscuro);
+    text-decoration:line-through;
+    text-decoration-thickness:2px;
+    text-decoration-color:var(--ocre);
+  }
+
+  /* ============ ACORDEÓN ============ */
+  .acordeon{
+    border:1px solid rgba(0,0,0,.14);
+    border-radius:var(--radio);
+    overflow:hidden;
+    background:var(--blanco);
+    margin-bottom:.8rem;
+  }
+
+  .acordeon-btn{
+    width:100%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:1rem;
+    background:var(--blanco);
+    border:0;
+    padding:1.05rem 1.25rem;
+    font-family:inherit;
+    font-size:1rem;
+    font-weight:700;
+    color:var(--negro);
+    cursor:pointer;
+    text-align:left;
+    transition:.2s;
+  }
+
+  .acordeon-btn:hover{background:var(--beige)}
+  .acordeon-btn:focus-visible{outline:3px solid var(--oliva);outline-offset:-3px}
+
+  .acordeon-btn .icono{
+    flex:none;
+    width:30px;height:30px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--ocre);
+    color:var(--negro);
+    font-size:1.15rem;
+    font-weight:700;
+    line-height:1;
+    transition:.25s;
+  }
+
+  .acordeon-btn[aria-expanded="true"]{background:var(--beige)}
+  .acordeon-btn[aria-expanded="true"] .icono{background:var(--oliva);color:var(--blanco);transform:rotate(180deg)}
+
+  .acordeon-panel{
+    display:none;
+    padding:0 1.25rem 1.25rem;
+    border-top:1px solid rgba(0,0,0,.10);
+    animation:aparece .28s ease;
+  }
+
+  .acordeon-panel.abierto{display:block}
+
+  @keyframes aparece{
+    from{opacity:0;transform:translateY(-6px)}
+    to{opacity:1;transform:translateY(0)}
+  }
+
+  /* ============ MATERIAS (links Drive) ============ */
+  .materias{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:.85rem;
+    margin:1.2rem 0;
+  }
+
+  .materia{
+    display:flex;
+    flex-direction:column;
+    gap:.3rem;
+    background:var(--blanco);
+    border:2px solid rgba(0,0,0,.12);
+    border-left:6px solid var(--oliva);
+    border-radius:12px;
+    padding:1rem 1.1rem;
+    text-decoration:none;
+    color:var(--negro);
+    transition:.2s;
+  }
+
+  .materia:hover,
+  .materia:focus-visible{
+    border-left-color:var(--ocre);
+    background:var(--beige);
+    transform:translateX(4px);
+    outline:none;
+  }
+
+  .materia-nombre{font-weight:800;font-size:1.02rem;font-family:Georgia,serif}
+  .materia-accion{font-size:.78rem;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--ocre-oscuro)}
+
+  /* ============ TABLAS ============ */
+  .tabla-scroll{overflow-x:auto;border-radius:var(--radio);border:1px solid rgba(0,0,0,.14);background:var(--blanco)}
+
+  table{width:100%;border-collapse:collapse;min-width:560px;font-size:.92rem}
+
+  caption{
+    caption-side:top;
+    text-align:left;
+    padding:.9rem 1rem;
+    font-weight:700;
+    font-size:.85rem;
+    letter-spacing:.6px;
+    text-transform:uppercase;
+    color:var(--ocre-oscuro);
+    background:var(--beige);
+  }
+
+  th,td{padding:.8rem 1rem;text-align:left;border-bottom:1px solid rgba(0,0,0,.09);vertical-align:top}
+
+  thead th{
+    background:var(--negro);
+    color:var(--beige);
+    font-size:.8rem;
+    letter-spacing:.8px;
+    text-transform:uppercase;
+    position:sticky;
+    top:0;
+  }
+
+  tbody tr{transition:background .18s}
+  tbody tr:hover{background:var(--beige)}
+
+  tbody tr:last-child td{border-bottom:0}
+
+  .destacado{color:var(--oliva-oscuro);font-weight:700}
+  .gratis{color:var(--oliva-oscuro);font-weight:800}
+
+  /* ============ BUSCADOR ============ */
+  .buscador{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.6rem;
+    align-items:center;
+    margin:1.2rem 0 1rem;
+  }
+
+  .buscador input{
+    flex:1 1 260px;
+    padding:.75rem 1rem;
+    border-radius:999px;
+    border:2px solid rgba(0,0,0,.2);
+    background:var(--blanco);
+    font-family:inherit;
+    font-size:.95rem;
+    color:var(--negro);
+  }
+
+  .buscador input:focus{
+    outline:none;
+    border-color:var(--oliva);
+    box-shadow:0 0 0 4px rgba(92,107,46,.18);
+  }
+
+  .sin-resultados{
+    padding:1.2rem;
+    text-align:center;
+    font-weight:700;
+    color:var(--ocre-oscuro);
+    background:var(--blanco);
+    border-radius:var(--radio);
+    border:2px dashed var(--ocre);
+  }
+
+  /* ============ TABS ============ */
+  .tabs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:.45rem;
+    margin-bottom:1.2rem;
+  }
+
+  .tab{
+    background:var(--blanco);
+    border:2px solid rgba(0,0,0,.16);
+    border-radius:999px;
+    padding:.5rem 1rem;
+    font-family:inherit;
+    font-size:.85rem;
+    font-weight:700;
+    color:var(--negro);
+    cursor:pointer;
+    transition:.2s;
+  }
+
+  .tab:hover{background:var(--beige);border-color:var(--ocre)}
+  .tab:focus-visible{outline:3px solid var(--oliva);outline-offset:2px}
+
+  .tab.activo{
+    background:var(--oliva);
+    border-color:var(--oliva);
+    color:var(--blanco);
+  }
+
+  .panel-tab{display:none}
+  .panel-tab.activo{display:block;animation:aparece .3s ease}
+
+  /* ============ AVISOS ============ */
+  .aviso{
+    border-left:6px solid var(--ocre);
+    background:var(--blanco);
+    border-radius:0 12px 12px 0;
+    padding:1rem 1.2rem;
+    margin:1.2rem 0;
+    font-size:.95rem;
+    box-shadow:var(--sombra);
+  }
+
+  .aviso strong{color:var(--ocre-oscuro)}
+
+  .aviso--oliva{border-left-color:var(--oliva)}
+  .aviso--oliva strong{color:var(--oliva-oscuro)}
+
+  .aviso--negro{border-left-color:var(--negro)}
+  .aviso--negro strong{color:var(--negro)}
+
+  /* ============ LISTAS ============ */
+  .lista-bonita{list-style:none;margin:1rem 0;padding:0}
+
+  .lista-bonita li{
+    position:relative;
+    padding-left:2rem;
+    margin-bottom:.7rem;
+  }
+
+  .lista-bonita li::before{
+    content:"✓";
+    position:absolute;
+    left:0;top:.05rem;
+    width:22px;height:22px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:50%;
+    background:var(--oliva);
+    color:var(--blanco);
+    font-size:.75rem;
+    font-weight:700;
+  }
+
+  .bloque--negro .lista-bonita li::before{background:var(--ocre);color:var(--negro)}
+
+  .lista-num{list-style:none;counter-reset:paso;margin:1rem 0;padding:0}
+
+  .lista-num li{
+    counter-increment:paso;
+    position:relative;
+    padding-left:3rem;
+    margin-bottom:.85rem;
+    min-height:32px;
+  }
+
+  .lista-num li::before{
+    content:counter(paso);
+    position:absolute;
+    left:0;top:0;
+    width:32px;height:32px;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:10px;
+    background:var(--negro);
+    color:var(--beige);
+    font-weight:800;
+    font-size:.9rem;
+  }
+
+  /* ============ CANALES OFICIALES ============ */
+  .canal{
+    background:rgba(255,255,255,.06);
+    border:1px solid rgba(243,234,218,.28);
+    border-radius:var(--radio);
+    padding:1.3rem;
+    display:flex;
+    flex-direction:column;
+    gap:.7rem;
+  }
+
+  .canal h3{font-size:1.05rem;color:var(--blanco);margin:0}
+
+  .canal .url{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:.85rem;
+    color:var(--ocre-claro);
+    word-break:break-all;
+  }
+
+  .canal .canal-acciones{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:auto}
+
+  /* ============ MODAL ============ */
+  .modal-fondo{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.72);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    padding:1.2rem;
+    z-index:500;
+    backdrop-filter:blur(3px);
+  }
+
+  .modal-fondo.abierto{display:flex;animation:aparece .2s ease}
+
+  .modal-caja{
+    background:var(--beige);
+    border-radius:20px;
+    border-top:8px solid var(--ocre);
+    max-width:560px;
+    width:100%;
+    max-height:88vh;
+    overflow-y:auto;
+    padding:1.8rem;
+    box-shadow:0 24px 60px rgba(0,0,0,.5);
+    animation:sube .3s ease;
+  }
+
+  @keyframes sube{
+    from{opacity:0;transform:translateY(24px) scale(.97)}
+    to{opacity:1;transform:translateY(0) scale(1)}
+  }
+
+  .modal-caja h3{font-size:1.35rem;margin-bottom:.7rem}
+  .modal-caja p{font-size:.96rem;color:var(--gris)}
+
+  .modal-cerrar{
+    position:absolute;
+    top:1rem;right:1rem;
+    width:40px;height:40px;
+    border-radius:50%;
+    border:0;
+    background:var(--negro);
+    color:var(--beige);
+    font-size:1.3rem;
+    cursor:pointer;
+    line-height:1;
+  }
+
+  .modal-cerrar:hover{background:var(--ocre);color:var(--negro)}
+
+  .modal-envoltura{position:relative;width:100%;max-width:560px}
+
+  .modal-acciones{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+
+  /* ============ VOLVER ARRIBA ============ */
+  .arriba{
+    position:fixed;
+    right:1.1rem;
+    bottom:1.1rem;
+    width:52px;height:52px;
+    border-radius:50%;
+    border:0;
+    background:var(--negro);
+    color:var(--beige);
+    font-size:1.3rem;
+    cursor:pointer;
+    box-shadow:0 10px 26px rgba(0,0,0,.35);
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(14px);
+    transition:.28s;
+    z-index:300;
+  }
+
+  .arriba.visible{opacity:1;visibility:visible;transform:translateY(0)}
+  .arriba:hover{background:var(--ocre);color:var(--negro)}
+
+  /* ============ PIE ============ */
+  .pie{
+    background:var(--negro);
+    color:var(--beige-2);
+    padding:2.6rem 0 2rem;
+    font-size:.88rem;
+  }
+
+  .pie strong{color:var(--blanco)}
+
+  .pie a{color:var(--ocre-claro)}
+  .pie a:hover{color:var(--blanco)}
+
+  .pie-linea{
+    border-top:1px solid rgba(243,234,218,.2);
+    margin-top:1.4rem;
+    padding-top:1.2rem;
+    display:flex;
+    flex-wrap:wrap;
+    gap:.8rem;
+    justify-content:space-between;
+    font-size:.8rem;
+  }
+
+  /* ============ RESPONSIVE ============ */
+  @media (max-width:900px){
+    .btn-menu{display:block}
+
+    .nav-lista{
+      position:absolute;
+      top:100%;
+      left:0;right:0;
+      background:var(--negro);
+      flex-direction:column;
+      align-items:stretch;
+      gap:0;
+      padding:.5rem .8rem 1rem;
+      border-bottom:4px solid var(--ocre);
+      display:none;
+      max-height:70vh;
+      overflow-y:auto;
+    }
+
+    .nav-lista.abierto{display:flex}
+
+    .nav-lista a{padding:.7rem .8rem;font-size:.92rem;border-bottom:1px solid rgba(243,234,218,.12)}
+  }
+
+  @media (max-width:520px){
+    .bloque{padding:2.6rem 0}
+    .modal-caja{padding:1.4rem}
+    .portada{padding:2.6rem 0 2.2rem}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    *{animation:none !important;transition:none !important;scroll-behavior:auto !important}
+  }
+
+  /* ============ IMPRESIÓN ============ */
+  @media print{
+    .encabezado,.arriba,.acciones-portada,.buscador,.tabs,.btn,.modal-fondo{display:none !important}
+    .acordeon-panel{display:block !important}
+    .panel-tab{display:block !important}
+    body{background:#fff}
+    .bloque{padding:1rem 0;page-break-inside:avoid}
+    .tarjeta,.acordeon,.tabla-scroll{box-shadow:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= ENCABEZADO ================= -->
+<header class="encabezado">
+  <div class="barra">
+    <a class="marca" href="#inicio">
+      <span class="punto" aria-hidden="true"></span>
+      <span>
+        Voluntariado
+        <small>EPS · USAC</small>
+      </span>
+    </a>
+
+    <button class="btn-menu" id="btnMenu" aria-expanded="false" aria-controls="navLista" aria-label="Abrir menú de navegación">☰</button>
+
+    <nav aria-label="Navegación principal">
+      <ul class="nav-lista" id="navLista">
+        <li><a href="#presentacion">Presentación</a></li>
+        <li><a href="#panorama">Panorama</a></li>
+        <li><a href="#paso1">Paso 1</a></li>
+        <li><a href="#paso2">Paso 2</a></li>
+        <li><a href="#paso3">Paso 3</a></li>
+        <li><a href="#paso4">Paso 4</a></li>
+        <li><a href="#recursos">Recursos</a></li>
+        <li><a href="#canales">Canales</a></li>
+        <li><a href="#fuentes">Fuentes</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ================= PORTADA ================= -->
+  <section class="portada" id="inicio">
+    <div class="contenedor">
+      <span class="etiqueta"><span class="punto" aria-hidden="true"></span> Ejercicio Profesional Supervisado</span>
+
+      <h1>
+        Construyendo mi <span>futuro universitario</span>
+      </h1>
+
+      <p class="subtitulo">
+        Guía de pasos para el ingreso a la educación superior. Dirigida a estudiantes del nivel
+        diversificado y a toda persona interesada en ingresar a la Universidad de San Carlos
+        de Guatemala (USAC).
+      </p>
+
+      <div class="institucion">
+        <strong>Universidad de San Carlos de Guatemala</strong><br>
+        Facultad de Humanidades · Departamento de Pedagogía<br>
+        Ejercicio Profesional Supervisado (EPS) — Actividad de voluntariado
+      </div>
+
+      <div class="acciones-portada">
+        <a class="btn btn-primario" href="#panorama">Comenzar la guía →</a>
+        <a class="btn btn-oliva" href="#recursos">Material de estudio</a>
+        <a class="btn btn-borde" href="#canales">Canales oficiales</a>
+        <button class="btn btn-oscuro" type="button" id="btnImprimir">Imprimir / Guardar PDF</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PRESENTACIÓN ================= -->
+  <section class="bloque bloque--blanco" id="presentacion">
+    <div class="contenedor">
+      <span class="antetitulo">Presentación</span>
+      <h2 class="titulo-seccion">¿Qué encontrarás en esta guía?</h2>
+
+      <p class="bajada">
+        Este manual fue elaborado como parte de la actividad de voluntariado del Ejercicio
+        Profesional Supervisado (EPS) de la carrera de Pedagogía y Administración Educativa,
+        con el propósito de orientar a los estudiantes de diversificado y a cualquier persona
+        interesada en el proceso de admisión a la Universidad de San Carlos de Guatemala (USAC),
+        la única universidad pública del país.
+      </p>
+
+      <p class="bajada">
+        Ingresar a la USAC implica cumplir, en orden, una serie de pasos administrados
+        principalmente por la <strong>Sección de Orientación Vocacional</strong>, el
+        <strong>Sistema de Ubicación y Nivelación (SUN)</strong> y el
+        <strong>Departamento de Registro y Estadística</strong>. Conocer con anticipación cada
+        etapa, sus requisitos y sus fechas ayuda a evitar contratiempos y a tomar decisiones
+        informadas sobre la carrera a estudiar.
+      </p>
+
+      <div class="aviso">
+        <strong>Importante:</strong> las fechas, montos y algunos requisitos cambian cada ciclo
+        de admisión. Este manual resume el proceso general con base en fuentes oficiales y
+        periodísticas; siempre se debe confirmar la información vigente en los
+        <a href="#canales">canales oficiales de la USAC</a> mencionados al final de esta guía.
+      </div>
+
+      <div class="rejilla rejilla--3" style="margin-top:1.6rem">
+        <div class="tarjeta">
+          <h3>4 fases consecutivas</h3>
+          <p>No se puede avanzar a la siguiente fase sin haber aprobado la anterior.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>8 momentos clave</h3>
+          <p>Del orientador vocacional hasta la asignación de cursos del primer semestre.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Material de apoyo</h3>
+          <p>Carpetas de estudio en Drive para Lenguaje/Idioma, Matemática, Física, Química y Biología.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PANORAMA ================= -->
+  <section class="bloque" id="panorama">
+    <div class="contenedor">
+      <span class="antetitulo">Panorama general</span>
+      <h2 class="titulo-seccion">Las cuatro fases del proceso de admisión</h2>
+
+      <p class="bajada">
+        De acuerdo con el <strong>Diario de Centro América</strong>, medio oficial del Gobierno de
+        Guatemala, y con el reportaje de <strong>Prensa Libre</strong> sobre el proceso de admisión,
+        ingresar a la USAC requiere completar cuatro fases consecutivas. No se puede avanzar a la
+        siguiente fase sin haber aprobado la anterior.
+      </p>
+
+      <div class="rejilla rejilla--2" style="margin-top:1.5rem">
+        <button class="fase-card" type="button" data-fase="1">
+          <span class="fase-num">1</span>
+          <h3>Orientación Vocacional</h3>
+          <p>Prueba psicométrica y de intereses. Se asigna en línea y se realiza de forma presencial. Entrega el Número de Orientación Vocacional (NOV).</p>
+          <span class="ver">Ver detalle →</span>
+        </button>
+
+        <button class="fase-card" type="button" data-fase="2">
+          <span class="fase-num">2</span>
+          <h3>Pruebas de Conocimientos Básicos (PCB)</h3>
+          <p>Evalúan Lenguaje, Matemática, Física, Química y Biología. Se asignan en línea con el NOV, en cuatro oportunidades al año.</p>
+          <span class="ver">Ver detalle →</span>
+        </button>
+
+        <button class="fase-card" type="button" data-fase="3">
+          <span class="fase-num">3</span>
+          <h3>Pruebas Específicas</h3>
+          <p>Evalúan conocimientos propios de la carrera elegida. Las define cada facultad, escuela o centro universitario.</p>
+          <span class="ver">Ver detalle →</span>
+        </button>
+
+        <button class="fase-card" type="button" data-fase="4">
+          <span class="fase-num">4</span>
+          <h3>Preinscripción e Inscripción</h3>
+          <p>Trámite final en el Departamento de Registro y Estadística (registro.usac.edu.gt) para formalizar el ingreso.</p>
+          <span class="ver">Ver detalle →</span>
+        </button>
+      </div>
+
+      <div class="aviso aviso--oliva" style="margin-top:1.8rem">
+        A estas cuatro fases se suman otras etapas administrativas que el aspirante debe completar
+        una vez asignado a su carrera: la <strong>integración del expediente estudiantil</strong> y la
+        <strong>asignación de cursos</strong> para el semestre. En conjunto, el recorrido completo
+        comprende ocho momentos clave.
+      </div>
+
+      <!-- Progreso interactivo -->
+      <div class="progreso-caja">
+        <h3 style="margin-bottom:.2rem">Mi ruta de admisión</h3>
+        <p style="font-size:.92rem;color:var(--gris);margin-bottom:.4rem">
+          Marca cada momento conforme lo completes. Tu avance se guarda en este dispositivo.
+        </p>
+
+        <div class="barra-exterior" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="barraProgresoAria">
+          <div class="barra-interior" id="barraProgreso"></div>
+        </div>
+        <p id="textoProgreso" style="font-weight:700;font-size:.9rem;margin:0">0 de 8 pasos completados (0%)</p>
+
+        <ul class="lista-check" id="listaProgreso">
+          <li><input type="checkbox" id="c1" class="check-progreso"><label for="c1">Orientación vocacional</label></li>
+          <li><input type="checkbox" id="c2" class="check-progreso"><label for="c2">Análisis de resultados (perfil vocacional)</label></li>
+          <li><input type="checkbox" id="c3" class="check-progreso"><label for="c3">Pruebas de Conocimientos Básicos (PCB)</label></li>
+          <li><input type="checkbox" id="c4" class="check-progreso"><label for="c4">Pruebas de Conocimientos Específicos</label></li>
+          <li><input type="checkbox" id="c5" class="check-progreso"><label for="c5">Preinscripción</label></li>
+          <li><input type="checkbox" id="c6" class="check-progreso"><label for="c6">Inscripción final</label></li>
+          <li><input type="checkbox" id="c7" class="check-progreso"><label for="c7">Expediente estudiantil</label></li>
+          <li><input type="checkbox" id="c8" class="check-progreso"><label for="c8">Asignación de cursos</label></li>
+        </ul>
+
+        <button class="btn btn-borde btn-sm" type="button" id="btnReiniciarProgreso" style="margin-top:1rem">
+          Reiniciar mi progreso
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PASO 1 ================= -->
+  <section class="bloque bloque--blanco" id="paso1">
+    <div class="contenedor">
+      <span class="antetitulo">Paso 1</span>
+      <h2 class="titulo-seccion"><span class="num">1</span>Orientación Vocacional</h2>
+
+      <p class="bajada">
+        Es el primer requisito del proceso y está dirigido a estudiantes del último año de
+        diversificado o a personas ya graduadas de ese nivel. Según el sitio de la Escuela de
+        Ingeniería Mecánica Industrial de la USAC, esta prueba es <strong>obligatoria</strong> para
+        continuar el proceso, pero sus resultados <strong>no limitan la elección de carrera</strong>:
+        es una guía, no un filtro.
+      </p>
+
+      <div class="acordeon">
+        <button class="acordeon-btn" type="button" aria-expanded="false">
+          Dos fases del proceso <span class="icono" aria-hidden="true">+</span>
+        </button>
+        <div class="acordeon-panel">
+          <p><strong>Fase I – Evaluación psicométrica:</strong> mide habilidades lógico-matemáticas,
+          verbales y abstractas, además de los intereses profesionales del aspirante.</p>
+          <p><strong>Fase II – Entrega e interpretación de resultados:</strong> se brinda
+          retroalimentación sobre el perfil vocacional y se entrega la constancia con el
+          Número de Orientación Vocacional (NOV).</p>
+        </div>
+      </div>
+
+      <div class="acordeon">
+        <button class="acordeon-btn" type="button" aria-expanded="false">
+          Modalidad de la prueba <span class="icono" aria-hidden="true">+</span>
+        </button>
+        <div class="acordeon-panel">
+          <p>
+            La asignación a la prueba se realiza <strong>en línea</strong>, a través del portal
+            <a href="https://vocacional.usac.edu.gt" target="_blank" rel="noopener noreferrer">vocacional.usac.edu.gt</a>,
+            mientras que la evaluación en sí se aplica de forma <strong>presencial</strong>.
+          </p>
+          <p>
+            En algunos ciclos la USAC ha asignado la evaluación de forma aleatoria entre modalidad
+            presencial y virtual, por lo que es importante revisar la constancia de asignación para
+            confirmar el lugar, la fecha y la modalidad correspondiente.
+          </p>
+        </div>
+      </div>
+
+      <div class="acordeon">
+        <button class="acordeon-btn" type="button" aria-expanded="false">
+          ¿Por qué es indispensable el NOV? <span class="icono" aria-hidden="true">+</span>
+        </button>
+        <div class="acordeon-panel">
+          <p>
+            El <strong>Número de Orientación Vocacional (NOV)</strong> es el dato que habilita al
+            aspirante para continuar con las Pruebas de Conocimientos Básicos. Sin este número
+            <strong>no es posible crear una cuenta</strong> en el Sistema de Ubicación y Nivelación (SUN).
+          </p>
+        </div>
+      </div>
+
+      <div class="acciones-portada">
+        <a class="btn btn-primario" href="https://vocacional.usac.edu.gt" target="_blank" rel="noopener noreferrer">
+          Ir al Portal Vocacional ↗
+        </a>
+        <a class="btn btn-borde" href="#paso2">Continuar al Paso 2 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PASO 2 ================= -->
+  <section class="bloque" id="paso2">
+    <div class="contenedor">
+      <span class="antetitulo">Paso 2</span>
+      <h2 class="titulo-seccion"><span class="num">2</span>Pruebas de Conocimientos Básicos (PCB)</h2>
+
+      <p class="bajada">
+        Las PCB son evaluaciones objetivas de selección múltiple, tal como las describen el
+        repositorio digital de la USAC. Miden el dominio de conocimientos fundamentales del nivel
+        medio (ciclo básico y diversificado) y son elaboradas por especialistas de la propia
+        universidad.
+      </p>
+
+      <h3 style="margin-top:2rem">Cinco materias evaluadas</h3>
+      <p>Según el Sistema de Ubicación y Nivelación, las cinco materias que conforman las PCB son
+      las siguientes. Toca cada una para abrir su carpeta de material de estudio:</p>
+
+      <div class="materias">
+        <a class="materia" href="https://drive.google.com/drive/folders/1CT-PGiZrIX95PZgRNPa2pOC9yGKKOYYm" target="_blank" rel="noopener noreferrer">
+          <span class="materia-nombre">Lenguaje / Idioma</span>
+          <span class="materia-accion">Material de estudio ↗</span>
+        </a>
+        <a class="materia" href="https://drive.google.com/drive/folders/1oU6EDV55Jiy5-PPnyXPH1avFnBMWZmM1" target="_blank" rel="noopener noreferrer">
+          <span class="materia-nombre">Matemática</span>
+          <span class="materia-accion">Material de estudio ↗</span>
+        </a>
+        <a class="materia" href="https://drive.google.com/drive/folders/1ei04-vDj90bhZq9GJ7etQNW_1RMpLViM" target="_blank" rel="noopener noreferrer">
+          <span class="materia-nombre">Física</span>
+          <span class="materia-accion">Material de estudio ↗</span>
+        </a>
+        <a class="materia" href="https://drive.google.com/drive/folders/1p_fh6Il2fjRR447RBLSsX5s9P2zBX_Ck" target="_blank" rel="noopener noreferrer">
+          <span class="materia-nombre">Química</span>
+          <span class="materia-accion">Material de estudio ↗</span>
+        </a>
+        <a class="materia" href="https://drive.google.com/drive/folders/1aThsLEFd8Y1E0mOZ9zDBoApInEXFZPQo" target="_blank" rel="noopener noreferrer">
+          <span class="materia-nombre">Biología</span>
+          <span class="materia-accion">Material de estudio ↗</span>
+        </a>
+      </div>
+
+      <div class="aviso aviso--oliva">
+        <strong>Ojo:</strong> no todos los aspirantes presentan las cinco pruebas. Cada facultad,
+        escuela o centro universitario define cuáles materias son requisito según el perfil de
+        ingreso de la carrera. Consulta la tabla más abajo.
+      </div>
+
+      <div class="acordeon">
+        <button class="acordeon-btn" type="button" aria-expanded="false">
+          Cómo asignarse: los siete pasos en línea <span class="icono" aria-hidden="true">+</span>
+        </button>
+        <div class="acordeon-panel">
+          <ol class="lista-num">
+            <li>Ingresar al sitio del Sistema de Ubicación y Nivelación:
+              <a href="https://sunenlinea.usac.edu.gt/saar/" target="_blank" rel="noopener noreferrer">sunenlinea.usac.edu.gt/saar/</a>
+            </li>
+            <li>Seleccionar la opción <strong>“Crear cuenta”</strong>.</li>
+            <li>Elegir el tipo de aspirante: <strong>“Aspirante”</strong> (primer ingreso, con NOV) o
+              <strong>“Estudiante USAC”</strong> (si ya tiene carné).</li>
+            <li>Verificar que los datos personales registrados sean correctos.</li>
+            <li>Ingresar a la sección de PCB y seleccionar <strong>“Asignación”</strong>.</li>
+            <li>Elegir la unidad académica y la carrera de interés, y confirmar la asignación.</li>
+            <li>Descargar la constancia de inscripción con las instrucciones, la fecha, el lugar y la
+              modalidad de la prueba.</li>
+          </ol>
+        </div>
+      </div>
+
+      <div class="acordeon">
+        <button class="acordeon-btn" type="button" aria-expanded="false">
+          Calendario 2026 (ejemplo de organización) <span class="icono" aria-hidden="true">+</span>
+        </button>
+        <div class="acordeon-panel">
+          <div class="tabla-scroll">
+            <table>
+              <caption>Oportunidades de las PCB</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Oportunidad</th>
+                  <th scope="col">Asignación</th>
+                  <th scope="col">Aplicación</th>
+                  <th scope="col">Resultados</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>2.ª oportunidad</td><td>A partir del 20 de agosto</td><td>14 y 15 de julio</td><td>23 de julio al 12 de agosto</td></tr>
+                <tr><td>3.ª oportunidad</td><td>A partir del 1 de octubre</td><td>25 al 27 de agosto</td><td>7 al 24 de septiembre</td></tr>
+                <tr><td>4.ª oportunidad</td><td>A partir del 4 de noviembre</td><td>6 al 8 de octubre</td><td>15 al 30 de octubre</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:.88rem;margin-top:.9rem;color:var(--gris)">
+            Estas fechas corresponden a un ciclo específico y no se repiten igual cada año; se incluyen
+            únicamente como ejemplo de cómo se organiza el calendario. Consulta siempre el calendario
+            vigente en <a href="https://sun.usac.edu.gt" target="_blank" rel="noopener noreferrer">sun.usac.edu.gt</a>.
+          </p>
+        </div>
+      </div>
+
+      <div class="acordeon">
+        <button class="acordeon-btn" type="button" aria-expanded="false">
+          Consulta de resultados <span class="icono" aria-hidden="true">+</span>
+        </button>
+        <div class="acordeon-panel">
+          <p>
+            Los resultados se consultan en línea, en el mismo sistema del SUN, ingresando el número de
+            identificación del aspirante. Si el resultado es satisfactorio en todas las materias que
+            exige la carrera, se genera la constancia que habilita el siguiente paso. Si una materia
+            resulta insatisfactoria, es posible volver a inscribirse en la siguiente oportunidad del
+            calendario.
+          </p>
+        </div>
+      </div>
+
+      <h3 style="margin-top:2.4rem">Pruebas básicas por unidad académica</h3>
+      <p>Escribe el nombre de tu facultad, escuela o carrera para filtrar la tabla:</p>
+
+      <div class="buscador">
+        <label for="buscadorFacultades" class="visually-hidden" style="position:absolute;left:-9999px">Buscar facultad o escuela</label>
+        <input type="search" id="buscadorFacultades" placeholder="Buscar: Ingeniería, Medicina, Humanidades…" autocomplete="off">
+        <button class="btn btn-borde btn-sm" type="button" id="btnLimpiarBusqueda">Limpiar</button>
+      </div>
+
+      <div class="tabla-scroll">
+        <table id="tablaFacultades">
+          <caption>Materias que evalúa cada unidad académica</caption>
+          <thead>
+            <tr>
+              <th scope="col">Facultad / Escuela</th>
+              <th scope="col">Pruebas básicas que se evalúan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Facultad de Ciencias Médicas</td><td>Lenguaje, Física, Química y Biología</td></tr>
+            <tr><td>Facultad de Ingeniería</td><td>Lenguaje y Física</td></tr>
+            <tr><td>Facultad de Ciencias Económicas</td><td>Matemática (y Lenguaje en algunas especialidades)</td></tr>
+            <tr><td>Facultad de Ciencias Jurídicas y Sociales</td><td>Lenguaje</td></tr>
+            <tr><td>Facultad de Arquitectura</td><td>Lenguaje y Matemática</td></tr>
+            <tr><td>Facultad de Ciencias Químicas y Farmacia</td><td>Lenguaje, Matemática, Física, Química y Biología (las 5 materias)</td></tr>
+            <tr><td>Facultad de Odontología</td><td>Lenguaje, Matemática, Física, Química y Biología (las 5 materias)</td></tr>
+            <tr><td>Facultad de Agronomía</td><td>Lenguaje</td></tr>
+            <tr><td>Facultad de Humanidades</td><td>Lenguaje</td></tr>
+            <tr><td>Facultad de Medicina Veterinaria y Zootecnia</td><td>Lenguaje, Química y Biología</td></tr>
+            <tr><td>Escuela de Ciencias Psicológicas</td><td>Lenguaje y Biología</td></tr>
+            <tr><td>Escuela de Ciencias de la Comunicación</td><td>Lenguaje</td></tr>
+            <tr><td>Escuela de Ciencia Política</td><td>Lenguaje</td></tr>
+            <tr><td>Escuela de Trabajo Social</td><td>Lenguaje</td></tr>
+            <tr><td>Escuela de Ciencias Físicas y Matemáticas (ECFM)</td><td>Lenguaje, Matemática y Física</td></tr>
+            <tr><td>Escuela de Ciencias Lingüísticas</td><td>Lenguaje</td></tr>
+            <tr><td>ECTAFIDE (Educación Física)</td><td>Lenguaje</td></tr>
+            <tr><td>Escuela Superior de Arte</td><td>Lenguaje</td></tr>
+            <tr><td>Escuela de Historia</td><td>Lenguaje</td></tr>
+            <tr><td>EFPEM (Formación de Profesores)</td><td>Lenguaje (y Matemática según la especialidad)</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="sin-resultados" id="sinResultados" hidden>No se encontraron unidades académicas con ese nombre. Intenta con otra palabra.</p>
+
+      <div class="acciones-portada">
+        <a class="btn btn-primario" href="https://sunenlinea.usac.edu.gt/saar/" target="_blank" rel="noopener noreferrer">
+          Asignarme a las PCB ↗
+        </a>
+        <a class="btn btn-borde" href="#recursos">Ver material de estudio</a>
+        <a class="btn btn-borde" href="#paso3">Continuar al Paso 3 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PASO 3 ================= -->
+  <section class="bloque bloque--blanco" id="paso3">
+    <div class="contenedor">
+      <span class="antetitulo">Paso 3</span>
+      <h2 class="titulo-seccion"><span class="num">3</span>Prueba Específica</h2>
+
+      <p class="bajada">
+        Una vez aprobadas las PCB requeridas, el aspirante debe presentar la Prueba Específica de la
+        unidad académica a la que desea ingresar. A diferencia de las PCB, estas pruebas no las
+        administra el SUN de forma centralizada, sino cada facultad, escuela o centro universitario.
+      </p>
+
+      <div class="acordeon">
+        <button class="acordeon-btn" type="button" aria-expanded="false">
+          Puntos en común entre facultades <span class="icono" aria-hidden="true">+</span>
+        </button>
+        <div class="acordeon-panel">
+          <ul class="lista-bonita">
+            <li>Se asignan en línea, generalmente con <strong>cuatro oportunidades al año</strong>, según el
+              calendario propio de cada unidad académica.</li>
+            <li>El resultado satisfactorio tiene una <strong>vigencia de dos años</strong> a partir de su emisión.</li>
+            <li>El costo y los requisitos varían: algunas facultades no cobran (como Humanidades),
+              mientras que otras generan una orden de pago propia.</li>
+          </ul>
+        </div>
+      </div>
+
+      <h3 style="margin-top:2rem">Ejemplos por unidad académica</h3>
+
+      <div class="tabla-scroll">
+        <table>
+          <caption>Prueba específica: ejemplos</caption>
+          <thead>
+            <tr>
+              <th scope="col">Facultad / Unidad</th>
+              <th scope="col">Materias de la prueba específica</th>
+              <th scope="col">Dato relevante</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Humanidades (Pedagogía, Bibliotecología, entre otras)</td>
+              <td>Varía según la carrera</td>
+              <td>No tiene costo; requiere tener aprobada la PCB de Lenguaje; validez de 2 años.</td>
+            </tr>
+            <tr>
+              <td>Agronomía</td>
+              <td>Matemática y Biología</td>
+              <td>Se ofrecen cuatro oportunidades al año, igual que las PCB.</td>
+            </tr>
+            <tr>
+              <td>Derecho (Ciencias Jurídicas y Sociales)</td>
+              <td>Nociones Generales de Ciencias Jurídicas y Sociales, Realidad Nacional</td>
+              <td>La primera fase exige la Orientación Vocacional y la entrega de documentos antes de la prueba específica.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="aviso">
+        <strong>Recuerda:</strong> la Facultad de Humanidades exige, además, tener aprobada previamente
+        la prueba básica de <strong>Lenguaje</strong> antes de poder asignarse a su prueba específica.
+      </div>
+
+      <h3 style="margin-top:2.4rem">Facultad de Humanidades — por Departamento Académico</h3>
+      <p>Toca cada departamento para ver su prueba específica, las carreras vinculadas y lo que evalúa:</p>
+
+      <div class="tabs-contenedor">
+        <div class="tabs" role="tablist" aria-label="Departamentos académicos de la Facultad de Humanidades">
+          <button class="tab activo" role="tab" aria-selected="true" aria-controls="tab-pedagogia" data-tab="tab-pedagogia" type="button">1. Pedagogía</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-letras" data-tab="tab-letras" type="button">2. Letras</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-filosofia" data-tab="tab-filosofia" type="button">3. Filosofía</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-idiomas" data-tab="tab-idiomas" type="button">4. Idiomas</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-arte" data-tab="tab-arte" type="button">5. Arte</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-bibliotecologia" data-tab="tab-bibliotecologia" type="button">6. Bibliotecología</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-historia" data-tab="tab-historia" type="button">7. Historia</button>
+          <button class="tab" role="tab" aria-selected="false" aria-controls="tab-virtual" data-tab="tab-virtual" type="button">8. Educación Virtual</button>
+        </div>
+
+        <div class="panel-tab activo" id="tab-pedagogia" role="tabpanel">
+          <div class="tarjeta">
+            <h3>Prueba específica: Liderazgo Pedagógico</h3>
+            <p><strong>Carreras vinculadas:</strong></p>
+            <ul class="lista-bonita">
+              <li>Todos los Profesorados de Enseñanza Media (PEM)</li>
+              <li>Técnicos en Liderazgo, Administración, Orientación y Evaluación Educativa</li>
+              <li>Licenciatura en Pedagogía (todas las especialidades)</li>
+            </ul>
+            <p><strong>¿Qué evalúa?</strong> La vocación docente, rasgos de liderazgo en el aula,
+            aptitudes pedagógicas y ética educativa.</p>
+          </div>
+        </div>
+
+        <div class="panel-tab" id="tab-letras" role="tabpanel">
+          <div class="tarjeta">
+            <h3>Prueba específica: Comprensión Lectora</h3>
+            <p><strong>Carreras vinculadas:</strong></p>
+            <ul class="lista-bonita">
+              <li>Licenciatura en Letras</li>
+              <li>PEM en Lengua y Literatura</li>
+            </ul>
+            <p><strong>¿Qué evalúa?</strong> La capacidad de análisis crítico, niveles de lectura
+            (literal, inferencial, analítica) y competencias lingüísticas sintácticas.</p>
+          </div>
+        </div>
+
+        <div class="panel-tab" id="tab-filosofia" role="tabpanel">
+          <div class="tarjeta">
+            <h3>Prueba específica: Comprensión Lectora</h3>
+            <p><strong>Carreras vinculadas:</strong></p>
+            <ul class="lista-bonita">
+              <li>Licenciatura en Filosofía</li>
+              <li>PEM en Filosofía</li>
+            </ul>
+            <p><strong>¿Qué evalúa?</strong> El pensamiento lógico, el razonamiento abstracto,
+            la argumentación y la comprensión de textos complejos.</p>
+          </div>
+        </div>
+
+        <div class="panel-tab" id="tab-idiomas" role="tabpanel">
+          <div class="tarjeta">
+            <h3>Prueba específica: Idioma Inglés (English Placement Test)</h3>
+            <p><strong>Carreras vinculadas:</strong></p>
+            <ul class="lista-bonita">
+              <li>PEM en Idioma Inglés</li>
+              <li>Licenciatura en Idioma Inglés</li>
+            </ul>
+            <p><strong>¿Qué evalúa?</strong> El dominio del idioma extranjero en cuatro áreas:
+            gramática, vocabulario (vocabulary), comprensión lectora y auditiva.</p>
+            <p class="destacado">Esta prueba tiene un costo único de Q. 50.00.</p>
+          </div>
+        </div>
+
+        <div class="panel-tab" id="tab-arte" role="tabpanel">
+          <div class="tarjeta">
+            <h3>Prueba específica: Creatividad / Aptitud Artística</h3>
+            <p><strong>Carreras vinculadas:</strong></p>
+            <ul class="lista-bonita">
+              <li>PEM en Artes Plásticas</li>
+              <li>PEM en Educación Musical</li>
+              <li>Licenciatura en Arte</li>
+              <li>Técnico en Restauración de Bienes Muebles</li>
+              <li>Técnico en Museografía</li>
+            </ul>
+            <p><strong>¿Qué evalúa?</strong> Destrezas motrices finas, nociones de espacio, ritmo y
+            habilidades auditivas (para música), así como el potencial creativo del aspirante.</p>
+          </div>
+        </div>
+
+        <div class="panel-tab" id="tab-bibliotecologia" role="tabpanel">
+          <div class="tarjeta">
+            <h3>Prueba específica: Computación y Comprensión Lectora</h3>
+            <p><strong>Carreras vinculadas:</strong></p>
+            <ul class="lista-bonita">
+              <li>Técnico Universitario en Bibliotecología</li>
+              <li>Licenciatura en Bibliotecología</li>
+            </ul>
+            <p><strong>¿Qué evalúa?</strong> Habilidades del manejo de herramientas informáticas
+            básicas y la comprensión en la clasificación u organización de textos.</p>
+          </div>
+        </div>
+
+        <div class="panel-tab" id="tab-historia" role="tabpanel">
+          <div class="tarjeta">
+            <h3>Prueba específica: Comprensión Lectora</h3>
+            <p><strong>Carreras vinculadas:</strong></p>
+            <ul class="lista-bonita">
+              <li>PEM en Ciencias Sociales y Formación Ciudadana</li>
+              <li>Licenciatura en Historiografía / Arqueología</li>
+            </ul>
+            <p><strong>¿Qué evalúa?</strong> La comprensión lectora aplicada al análisis de textos
+            históricos y sociales.</p>
+          </div>
+        </div>
+
+        <div class="panel-tab" id="tab-virtual" role="tabpanel">
+          <div class="tarjeta">
+            <h3>Pruebas específicas: 1. Liderazgo Pedagógico · 2. Computación</h3>
+            <p><strong>Carreras vinculadas:</strong></p>
+            <ul class="lista-bonita">
+              <li>Licenciatura en Educación Virtual</li>
+              <li>Profesorados y Licenciaturas en modalidad e-learning / virtual</li>
+            </ul>
+            <p><strong>Liderazgo Pedagógico:</strong> mide la vocación docente, ética, aptitud didáctica
+            y razonamiento lógico-educativo.</p>
+            <p><strong>Computación:</strong> mide el dominio de entornos virtuales, herramientas
+            ofimáticas básicas, navegación y competencias digitales indispensables para el aprendizaje
+            a distancia.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="acciones-portada">
+        <a class="btn btn-primario" href="https://humanidades.usac.edu.gt" target="_blank" rel="noopener noreferrer">
+          Sitio de la Facultad de Humanidades ↗
+        </a>
+        <a class="btn btn-borde" href="#paso4">Continuar al Paso 4 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PASO 4 ================= -->
+  <section class="bloque" id="paso4">
+    <div class="contenedor">
+      <span class="antetitulo">Paso 4</span>
+      <h2 class="titulo-seccion"><span class="num">4</span>Preinscripción e Inscripción</h2>
+
+      <p class="bajada">
+        La Facultad de Humanidades de la USAC señala con claridad que este es el cuarto y último paso
+        del proceso de admisión, y que todos los pasos anteriores son obligatorios para poder
+        completarlo.
+      </p>
+
+      <div class="rejilla rejilla--2" style="margin-top:1.4rem">
+        <div class="tarjeta">
+          <h3>Preinscripción</h3>
+          <p>Trámite previo que confirma el interés del aspirante en la carrera asignada.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Inscripción</h3>
+          <p>Formaliza el ingreso a la USAC como estudiante de primer ingreso.</p>
+        </div>
+      </div>
+
+      <div class="aviso" style="margin-top:1.4rem">
+        Ambos trámites se realizan a través del sitio oficial de registro:
+        <a href="https://registro.usac.edu.gt" target="_blank" rel="noopener noreferrer">registro.usac.edu.gt</a>,
+        donde se publican el calendario, los requisitos específicos por facultad y los documentos
+        necesarios (como el Documento Personal de Identificación —DPI—, fotografías y las constancias
+        obtenidas en los pasos anteriores).
+      </div>
+
+      <div class="acciones-portada">
+        <a class="btn btn-primario" href="https://registro.usac.edu.gt" target="_blank" rel="noopener noreferrer">
+          Ir a Registro y Estadística ↗
+        </a>
+        <a class="btn btn-borde" href="#posteriores">Ver etapas posteriores →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ETAPAS POSTERIORES ================= -->
+  <section class="bloque bloque--blanco" id="posteriores">
+    <div class="contenedor">
+      <span class="antetitulo">Etapas posteriores</span>
+      <h2 class="titulo-seccion">Expediente estudiantil y asignación de cursos</h2>
+
+      <p class="bajada">
+        Después de formalizar la inscripción, el proceso continúa con dos gestiones administrativas
+        necesarias para iniciar el semestre:
+      </p>
+
+      <div class="rejilla rejilla--2" style="margin-top:1.2rem">
+        <div class="tarjeta">
+          <h3>Expediente estudiantil</h3>
+          <p>Integración de los documentos personales y académicos que respaldan la inscripción del
+          estudiante en su unidad académica.</p>
+        </div>
+        <div class="tarjeta">
+          <h3>Asignación de cursos para el semestre</h3>
+          <p>Trámite mediante el cual el estudiante queda inscrito en los cursos correspondientes al
+          primer ciclo de su carrera.</p>
+        </div>
+      </div>
+
+      <p style="margin-top:1.2rem">
+        Cada unidad académica informa, a través de sus propios canales, los procedimientos y las fechas
+        para completar estos dos últimos pasos. En el caso de la Facultad de Humanidades, las
+        asignaciones se realizan a un mes de finalizar el semestre ingresando al portal de consulta.
+      </p>
+
+      <div class="acciones-portada">
+        <a class="btn btn-oliva" href="https://humanidades.usac.edu.gt/consulta/site/login" target="_blank" rel="noopener noreferrer">
+          Portal de consulta FAHUSAC ↗
+        </a>
+      </div>
+
+      <h3 style="margin-top:2.6rem">Sobre los pagos del proceso</h3>
+      <p>
+        Varias etapas del proceso de admisión pueden requerir el pago de una orden o boleta, aunque los
+        montos y la gratuidad de algunos pasos cambian de un ciclo a otro (por ejemplo, la USAC ha
+        anunciado ciclos en los que la inscripción y las PCB no tienen costo). La siguiente tabla
+        resume qué etapas suelen implicar un pago y qué conviene confirmar en cada caso.
+      </p>
+
+      <div class="tabla-scroll">
+        <table>
+          <caption>Costos referenciales del proceso</caption>
+          <thead>
+            <tr>
+              <th scope="col">Etapa del proceso</th>
+              <th scope="col">Costo oficial (estudiantes nacionales)</th>
+              <th scope="col">Observaciones y detalles importantes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1. Orientación Vocacional</td>
+              <td>Q. 70.00</td>
+              <td>Es el único examen de carácter general que requiere pago obligatorio. Se genera en el Portal Vocacional USAC.</td>
+            </tr>
+            <tr>
+              <td>2. Pruebas de Conocimientos Básicos (PCB)</td>
+              <td class="gratis">Gratuito (Q. 0.00)</td>
+              <td>Las evaluaciones administradas por el Sistema de Ubicación y Nivelación (SUN) de Lenguaje, Física, Matemática, etc., no tienen ningún costo.</td>
+            </tr>
+            <tr>
+              <td>3. Pruebas Específicas (FAHUSAC)</td>
+              <td class="gratis">Gratuito (Q. 0.00) — Excepción: Inglés</td>
+              <td>La mayoría de pruebas (Liderazgo Pedagógico, Computación, Comprensión Lectora) son completamente gratis. <strong>Excepción:</strong> la carrera de PEM en Idioma Inglés exige un pago único de Q. 50.00 por su examen de ubicación (Placement Test).</td>
+            </tr>
+            <tr>
+              <td>4. Preinscripción</td>
+              <td class="gratis">Gratuito (Q. 0.00)</td>
+              <td>La carga de la preinscripción no genera costo.</td>
+            </tr>
+            <tr>
+              <td>5. Inscripción Final</td>
+              <td>Q. 101.00</td>
+              <td>Matrícula oficial anual.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="aviso aviso--negro">
+        <strong>Antes de generar cualquier boleta de pago,</strong> confirma el monto y el procedimiento
+        vigente en el portal oficial correspondiente (Orientación Vocacional, SUN o el sitio de la
+        facultad/carrera de interés), ya que estos datos se actualizan cada ciclo académico.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RECURSOS ================= -->
+  <section class="bloque" id="recursos">
+    <div class="contenedor">
+      <span class="antetitulo">Material de apoyo</span>
+      <h2 class="titulo-seccion">Carpetas de estudio en Drive</h2>
+
+      <p class="bajada">
+        Recursos de repaso para las cinco materias de las Pruebas de Conocimientos Básicos. Toca cada
+        tarjeta para abrir la carpeta en una pestaña nueva.
+      </p>
+
+      <div class="rejilla rejilla--2" style="margin-top:1.5rem">
+
+        <a class="tarjeta" href="https://drive.google.com/drive/folders/1CT-PGiZrIX95PZgRNPa2pOC9yGKKOYYm" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block">
+          <h3>Lenguaje / Idioma</h3>
+          <p>Comprensión lectora, gramática, vocabulario y razonamiento verbal.</p>
+          <span class="materia-accion">Abrir carpeta en Drive ↗</span>
+        </a>
+
+        <a class="tarjeta" href="https://drive.google.com/drive/folders/1oU6EDV55Jiy5-PPnyXPH1avFnBMWZmM1" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block">
+          <h3>Matemática</h3>
+          <p>Álgebra, aritmética, geometría y razonamiento lógico-matemático.</p>
+          <span class="materia-accion">Abrir carpeta en Drive ↗</span>
+        </a>
+
+        <a class="tarjeta" href="https://drive.google.com/drive/folders/1ei04-vDj90bhZq9GJ7etQNW_1RMpLViM" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block">
+          <h3>Física</h3>
+          <p>Cinemática, dinámica, energía, electricidad y ejercicios de repaso.</p>
+          <span class="materia-accion">Abrir carpeta en Drive ↗</span>
+        </a>
+
+        <a class="tarjeta" href="https://drive.google.com/drive/folders/1p_fh6Il2fjRR447RBLSsX5s9P2zBX_Ck" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block">
+          <h3>Química</h3>
+          <p>Estructura atómica, enlaces, estequiometría y química orgánica básica.</p>
+          <span class="materia-accion">Abrir carpeta en Drive ↗</span>
+        </a>
+
+        <a class="tarjeta" href="https://drive.google.com/drive/folders/1aThsLEFd8Y1E0mOZ9zDBoApInEXFZPQo" target="_blank" rel="noopener noreferrer" style="text-decoration:none;color:inherit;display:block">
+          <h3>Biología</h3>
+          <p>Citología, genética, ecología, anatomía y fisiología.</p>
+          <span class="materia-accion">Abrir carpeta en Drive ↗</span>
+        </a>
+
+        <div class="tarjeta" style="background:var(--negro);color:var(--beige);border-color:var(--ocre)">
+          <h3 style="color:var(--blanco)">Consejo de estudio</h3>
+          <p style="color:var(--beige-2)">
+            Revisa primero las materias que exige tu carrera (ver la tabla del Paso 2) y practica con
+            exámenes de selección múltiple, que es el formato de las PCB.
+          </p>
+          <a class="btn btn-primario btn-sm" href="#paso2">Ver materias por carrera</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CANALES OFICIALES ================= -->
+  <section class="bloque bloque--negro" id="canales">
+    <div class="contenedor">
+      <span class="antetitulo">Canales oficiales de consulta</span>
+      <h2 class="titulo-seccion">Consulta únicamente fuentes oficiales</h2>
+
+      <p class="bajada">
+        Para evitar información desactualizada o poco confiable, la USAC recomienda consultar
+        únicamente sus canales oficiales:
+      </p>
+
+      <div class="rejilla rejilla--3" style="margin-top:1.5rem">
+
+        <div class="canal">
+          <h3>Portal de Orientación Vocacional</h3>
+          <span class="url">vocacional.usac.edu.gt</span>
+          <div class="canal-acciones">
+            <a class="btn btn-claro btn-sm" href="https://vocacional.usac.edu.gt" target="_blank" rel="noopener noreferrer">Abrir ↗</a>
+            <button class="btn btn-claro btn-sm" type="button" data-copiar="https://vocacional.usac.edu.gt">Copiar link</button>
+          </div>
+        </div>
+
+        <div class="canal">
+          <h3>Sistema de Ubicación y Nivelación (SUN)</h3>
+          <span class="url">sun.usac.edu.gt</span>
+          <div class="canal-acciones">
+            <a class="btn btn-claro btn-sm" href="https://sun.usac.edu.gt" target="_blank" rel="noopener noreferrer">Abrir ↗</a>
+            <button class="btn btn-claro btn-sm" type="button" data-copiar="https://sun.usac.edu.gt">Copiar link</button>
+          </div>
+        </div>
+
+        <div class="canal">
+          <h3>Registro y Estadística</h3>
+          <span class="url">registro.usac.edu.gt</span>
+          <div class="canal-acciones">
+            <a class="btn btn-claro btn-sm" href="https://registro.usac.edu.gt" target="_blank" rel="noopener noreferrer">Abrir ↗</a>
+            <button class="btn btn-claro btn-sm" type="button" data-copiar="https://registro.usac.edu.gt">Copiar link</button>
+          </div>
+        </div>
+
+        <div class="canal">
+          <h3>Asignación de PCB (SUN en línea)</h3>
+          <span class="url">sunenlinea.usac.edu.gt/saar/</span>
+          <div class="canal-acciones">
+            <a class="btn btn-claro btn-sm" href="https://sunenlinea.usac.edu.gt/saar/" target="_blank" rel="noopener noreferrer">Abrir ↗</a>
+            <button class="btn btn-claro btn-sm" type="button" data-copiar="https://sunenlinea.usac.edu.gt/saar/">Copiar link</button>
+          </div>
+        </div>
+
+        <div class="canal">
+          <h3>Facultad de Humanidades</h3>
+          <span class="url">humanidades.usac.edu.gt</span>
+          <div class="canal-acciones">
+            <a class="btn btn-claro btn-sm" href="https://humanidades.usac.edu.gt" target="_blank" rel="noopener noreferrer">Abrir ↗</a>
+            <button class="btn btn-claro btn-sm" type="button" data-copiar="https://humanidades.usac.edu.gt">Copiar link</button>
+          </div>
+        </div>
+
+        <div class="canal">
+          <h3>Asignación de cursos FAHUSAC</h3>
+          <span class="url">humanidades.usac.edu.gt/consulta/site/login</span>
+          <div class="canal-acciones">
+            <a class="btn btn-claro btn-sm" href="https://humanidades.usac.edu.gt/consulta/site/login" target="_blank" rel="noopener noreferrer">Abrir ↗</a>
+            <button class="btn btn-claro btn-sm" type="button" data-copiar="https://humanidades.usac.edu.gt/consulta/site/login">Copiar link</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="aviso" style="background:rgba(255,255,255,.07);border-left-color:var(--ocre);color:var(--beige)">
+        Si necesitas información adicional sobre una carrera o facultad específica, investiga
+        directamente en el sitio web oficial de esa unidad académica.
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= RECOMENDACIONES ================= -->
+  <section class="bloque bloque--oliva" id="recomendaciones">
+    <div class="contenedor">
+      <span class="antetitulo">Recomendaciones finales</span>
+      <h2 class="titulo-seccion">Cinco consejos para no perder el rumbo</h2>
+
+      <ul class="lista-bonita" style="margin-top:1.4rem;font-size:1.02rem">
+        <li><strong>Empieza el proceso con tiempo:</strong> cada fase tiene fechas límite estrictas y el
+          sistema puede saturarse cerca del cierre de la asignación.</li>
+        <li><strong>Guarda todas tus constancias</strong> (Orientación Vocacional, PCB y Prueba
+          Específica); son indispensables para el siguiente paso.</li>
+        <li><strong>Recuerda tu Número de Orientación Vocacional (NOV):</strong> lo necesitarás varias
+          veces durante el proceso.</li>
+        <li><strong>Verifica siempre la fecha, el lugar y la modalidad</strong> de cada prueba en tu
+          constancia de asignación, no solo en publicaciones de redes sociales.</li>
+        <li><strong>Ante cualquier duda, consulta directamente</strong> con la Sección de Orientación
+          Vocacional, el SUN o la unidad académica de tu interés.</li>
+      </ul>
+
+      <div class="acciones-portada">
+        <a class="btn btn-claro" href="#canales">Ver canales oficiales</a>
+        <a class="btn btn-claro" href="#inicio">Volver al inicio ↑</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FUENTES ================= -->
+  <section class="bloque bloque--blanco" id="fuentes">
+    <div class="contenedor">
+      <span class="antetitulo">Fuentes consultadas</span>
+      <h2 class="titulo-seccion">Referencias de esta guía</h2>
+
+      <ul class="lista-bonita" style="margin-top:1.2rem">
+        <li><strong>Diario de Centro América</strong> — cuatro pasos del proceso de admisión, naturaleza
+          presencial de la Orientación Vocacional, cinco materias de las PCB y modalidad de asignación.</li>
+        <li><strong>Prensa Libre</strong> — reportaje sobre el proceso de admisión, fases de la
+          Orientación Vocacional, fechas de las PCB y pasos de inscripción.</li>
+        <li><strong>Escuela de Ingeniería Mecánica Industrial, USAC</strong> — carácter obligatorio de la
+          Orientación Vocacional y función del NOV.</li>
+        <li><strong>Verodita.com</strong> — resumen del proceso de admisión y vigencia de las Pruebas
+          Específicas.</li>
+        <li><strong>Centro Universitario de Progreso (CUNPROGRESO)</strong> — inscripción y calendario de
+          las PCB.</li>
+        <li><strong>Publinews</strong> — calendario oficial de las PCB anunciado por el SUN.</li>
+        <li><strong>Referente Guatemala</strong> — pasos de asignación en línea y calendario de
+          oportunidades de las PCB.</li>
+        <li><strong>Repositorio digital de la USAC</strong> — diseño y contenido académico de las PCB.</li>
+        <li><strong>Centro Universitario de Occidente (CUNOC)</strong> — descripción de las PCB como
+          pruebas objetivas de opción múltiple.</li>
+        <li><strong>Facultad de Humanidades, USAC</strong> — calendario, vigencia, gratuidad y requisitos
+          de la Prueba Específica; pasos de preinscripción e inscripción.</li>
+        <li><strong>Facultad de Agronomía, USAC</strong> — calendario y materias de la Prueba Específica.</li>
+        <li><strong>Sitio del proceso de admisión de la Facultad de Derecho, USAC</strong> — requisitos de
+          la primera fase y entrega de documentos.</li>
+        <li><strong>Portales oficiales:</strong>
+          <a href="https://vocacional.usac.edu.gt" target="_blank" rel="noopener noreferrer">vocacional.usac.edu.gt</a>,
+          <a href="https://sun.usac.edu.gt" target="_blank" rel="noopener noreferrer">sun.usac.edu.gt</a>,
+          <a href="https://registro.usac.edu.gt" target="_blank" rel="noopener noreferrer">registro.usac.edu.gt</a>.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<!-- ================= PIE ================= -->
+<footer class="pie">
+  <div class="contenedor">
+    <p><strong>Voluntariado · Construyendo mi futuro universitario</strong><br>
+    Guía de pasos para el ingreso a la educación superior.</p>
+
+    <p>
+      Universidad de San Carlos de Guatemala · Facultad de Humanidades · Departamento de Pedagogía<br>
+      Ejercicio Profesional Supervisado (EPS) — Actividad de voluntariado.
+    </p>
+
+    <p style="font-size:.82rem;color:#B9AD97">
+      Documento informativo de carácter orientativo. Las fechas, montos y requisitos pueden cambiar
+      cada ciclo de admisión: confirma siempre la información vigente en los canales oficiales de la USAC.
+    </p>
+
+    <div class="pie-linea">
+      <span>© <span id="anioActual">2026</span> · Guía de voluntariado EPS</span>
+      <span>Hecha para estudiantes del nivel diversificado</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ================= BOTÓN VOLVER ARRIBA ================= -->
+<button class="arriba" id="btnArriba" type="button" aria-label="Volver arriba">↑</button>
+
+<!-- ================= MODAL ================= -->
+<div class="modal-fondo" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+  <div class="modal-envoltura">
+    <div class="modal-caja">
+      <button class="modal-cerrar" type="button" id="modalCerrar" aria-label="Cerrar ventana">×</button>
+      <span class="antetitulo" id="modalEtiqueta">Fase del proceso</span>
+      <h3 id="modalTitulo">Título</h3>
+      <p id="modalTexto">Descripción</p>
+      <div class="modal-acciones">
+        <button class="btn btn-primario" type="button" id="modalIr">Ir a la sección →</button>
+        <button class="btn btn-borde" type="button" id="modalCerrar2">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  /* =========================================================
+     1. MENÚ MÓVIL
+     ========================================================= */
+  var btnMenu = document.getElementById('btnMenu');
+  var navLista = document.getElementById('navLista');
+
+  if (btnMenu && navLista) {
+    btnMenu.addEventListener('click', function () {
+      var abierto = navLista.classList.toggle('abierto');
+      btnMenu.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+      btnMenu.textContent = abierto ? '✕' : '☰';
+    });
+
+    navLista.querySelectorAll('a').forEach(function (enlace) {
+      enlace.addEventListener('click', function () {
+        navLista.classList.remove('abierto');
+        btnMenu.setAttribute('aria-expanded', 'false');
+        btnMenu.textContent = '☰';
+      });
+    });
+  }
+
+  /* =========================================================
+     2. ACORDEONES
+     ========================================================= */
+  document.querySelectorAll('.acordeon-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var panel = btn.nextElementSibling;
+      if (!panel) return;
+
+      var abierto = panel.classList.toggle('abierto');
+      btn.setAttribute('aria-expanded', abierto ? 'true' : 'false');
+
+      var icono = btn.querySelector('.icono');
+      if (icono) icono.textContent = abierto ? '−' : '+';
+    });
+  });
+
+  /* =========================================================
+     3. PESTAÑAS (TABS) — Facultad de Humanidades
+     ========================================================= */
+  document.querySelectorAll('.tabs').forEach(function (grupo) {
+    var contenedor = grupo.parentElement;
+    var tabs = grupo.querySelectorAll('.tab');
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener('click', function () {
+        tabs.forEach(function (t) {
+          t.classList.remove('activo');
+          t.setAttribute('aria-selected', 'false');
+        });
+        tab.classList.add('activo');
+        tab.setAttribute('aria-selected', 'true');
+
+        contenedor.querySelectorAll('.panel-tab').forEach(function (p) {
+          p.classList.remove('activo');
+        });
+
+        var destino = document.getElementById(tab.dataset.tab);
+        if (destino) destino.classList.add('activo');
+      });
+
+      tab.addEventListener('keydown', function (e) {
+        var lista = Array.prototype.slice.call(tabs);
+        var i = lista.indexOf(tab);
+        var siguiente = null;
+
+        if (e.key === 'ArrowRight') siguiente = lista[(i + 1) % lista.length];
+        if (e.key === 'ArrowLeft') siguiente = lista[(i - 1 + lista.length) % lista.length];
+
+        if (siguiente) {
+          e.preventDefault();
+          siguiente.focus();
+          siguiente.click();
+        }
+      });
+    });
+  });
+
+  /* =========================================================
+     4. MODAL DE LAS 4 FASES
+     ========================================================= */
+  var datosFases = {
+    '1': {
+      etiqueta: 'Fase 1 de 4',
+      titulo: 'Orientación Vocacional',
+      texto: 'Prueba psicométrica y de intereses. Se asigna en línea, en el Portal Vocacional, y se realiza de forma presencial. Al finalizar se entrega el Número de Orientación Vocacional (NOV), indispensable para crear la cuenta en el SUN. Es obligatoria, pero sus resultados no limitan la elección de carrera.',
+      destino: '#paso1'
+    },
+    '2': {
+      etiqueta: 'Fase 2 de 4',
+      titulo: 'Pruebas de Conocimientos Básicos (PCB)',
+      texto: 'Evaluaciones objetivas de selección múltiple sobre Lenguaje, Matemática, Física, Química y Biología. Se asignan en línea con el NOV y se ofrecen cuatro oportunidades al año. Cada unidad académica define qué materias exige según la carrera.',
+      destino: '#paso2'
+    },
+    '3': {
+      etiqueta: 'Fase 3 de 4',
+      titulo: 'Pruebas Específicas',
+      texto: 'Evalúan conocimientos propios de la carrera elegida. No las administra el SUN de forma centralizada: cada facultad, escuela o centro universitario define su contenido, su calendario y su costo. El resultado satisfactorio tiene una vigencia de dos años.',
+      destino: '#paso3'
+    },
+    '4': {
+      etiqueta: 'Fase 4 de 4',
+      titulo: 'Preinscripción e Inscripción',
+      texto: 'Trámite final en el Departamento de Registro y Estadística (registro.usac.edu.gt). La preinscripción confirma el interés en la carrera asignada y la inscripción formaliza el ingreso a la USAC como estudiante de primer ingreso.',
+      destino: '#paso4'
+    }
+  };
+
+  var modal = document.getElementById('modal');
+  var modalTitulo = document.getElementById('modalTitulo');
+  var modalTexto = document.getElementById('modalTexto');
+  var modalEtiqueta = document.getElementById('modalEtiqueta');
+  var modalIr = document.getElementById('modalIr');
+  var ultimoFoco = null;
+
+  function abrirModal(fase) {
+    var d = datosFases[fase];
+    if (!d || !modal) return;
+
+    modalEtiqueta.textContent = d.etiqueta;
+    modalTitulo.textContent = d.titulo;
+    modalTexto.textContent = d.texto;
+    modalIr.dataset.destino = d.destino;
+
+    ultimoFoco = document.activeElement;
+    modal.classList.add('abierto');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('modalCerrar').focus();
+  }
+
+  function cerrarModal() {
+    if (!modal) return;
+    modal.classList.remove('abierto');
+    document.body.style.overflow = '';
+    if (ultimoFoco && typeof ultimoFoco.focus === 'function') ultimoFoco.focus();
+  }
+
+  document.querySelectorAll('.fase-card').forEach(function (card) {
+    card.addEventListener('click', function () {
+      abrirModal(card.dataset.fase);
+    });
+  });
+
+  if (modal) {
+    document.getElementById('modalCerrar').addEventListener('click', cerrarModal);
+    document.getElementById('modalCerrar2').addEventListener('click', cerrarModal);
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) cerrarModal();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('abierto')) cerrarModal();
+    });
+
+    modalIr.addEventListener('click', function () {
+      var destino = modalIr.dataset.destino;
+      cerrarModal();
+      var el = document.querySelector(destino);
+      if (el) {
+        setTimeout(function () {
+          el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 120);
+      }
+    });
+  }
+
+  /* =========================================================
+     5. BUSCADOR DE FACULTADES
+     ========================================================= */
+  var buscador = document.getElementById('buscadorFacultades');
+  var sinResultados = document.getElementById('sinResultados');
+  var btnLimpiar = document.getElementById('btnLimpiarBusqueda');
+
+  function filtrarFacultades() {
+    if (!buscador) return;
+    var q = buscador.value.trim().toLowerCase();
+    var filas = document.querySelectorAll('#tablaFacultades tbody tr');
+    var visibles = 0;
+
+    filas.forEach(function (tr) {
+      var coincide = tr.textContent.toLowerCase().indexOf(q) !== -1;
+      tr.style.display = coincide ? '' : 'none';
+      if (coincide) visibles++;
+    });
+
+    if (sinResultados) sinResultados.hidden = visibles !== 0;
+  }
+
+  if (buscador) {
+    buscador.addEventListener('input', filtrarFacultades);
+    buscador.addEventListener('search', filtrarFacultades);
+  }
+
+  if (btnLimpiar) {
+    btnLimpiar.addEventListener('click', function () {
+      if (buscador) {
+        buscador.value = '';
+        buscador.focus();
+      }
+      filtrarFacultades();
+    });
+  }
+
+  /* =========================================================
+     6. PROGRESO DEL ASPIRANTE (con guardado local)
+     ========================================================= */
+  var checks = Array.prototype.slice.call(document.querySelectorAll('.check-progreso'));
+  var barra = document.getElementById('barraProgreso');
+  var texto = document.getElementById('textoProgreso');
+  var barraAria = document.getElementById('barraProgresoAria');
+  var btnReiniciar = document.getElementById('btnReiniciarProgreso');
+  var CLAVE = 'usac-guia-progreso';
+
+  function guardarProgreso() {
+    try {
+      var estado = checks.map(function (c) { return c.checked ? 1 : 0; });
+      localStorage.setItem(CLAVE, JSON.stringify(estado));
+    } catch (e) { /* almacenamiento no disponible */ }
+  }
+
+  function cargarProgreso() {
+    try {
+      var guardado = localStorage.getItem(CLAVE);
+      if (!guardado) return;
+      var estado = JSON.parse(guardado);
+      if (!Array.isArray(estado)) return;
+      checks.forEach(function (c, i) {
+        if (typeof estado[i] !== 'undefined') c.checked = !!estado[i];
+      });
+    } catch (e) { /* sin datos previos */ }
+  }
+
+  function actualizarProgreso() {
+    if (!checks.length) return;
+
+    var total = checks.length;
+    var hechos = checks.filter(function (c) { return c.checked; }).length;
+    var pct = Math.round((hechos / total) * 100);
+
+    if (barra) barra.style.width = pct + '%';
+    if (texto) texto.textContent = hechos + ' de ' + total + ' pasos completados (' + pct + '%)';
+    if (barraAria) barraAria.setAttribute('aria-valuenow', String(pct));
+
+    guardarProgreso();
+  }
+
+  checks.forEach(function (c) {
+    c.addEventListener('change', actualizarProgreso);
+  });
+
+  if (btnReiniciar) {
+    btnReiniciar.addEventListener('click', function () {
+      checks.forEach(function (c) { c.checked = false; });
+      actualizarProgreso();
+    });
+  }
+
+  cargarProgreso();
+  actualizarProgreso();
+
+  /* =========================================================
+     7. COPIAR ENLACES
+     ========================================================= */
+  function copiarTexto(textoACopiar) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      return navigator.clipboard.writeText(textoACopiar);
+    }
+    return new Promise(function (resolve, reject) {
+      try {
+        var area = document.createElement('textarea');
+        area.value = textoACopiar;
+        area.setAttribute('readonly', '');
+        area.style.position = 'fixed';
+        area.style.left = '-9999px';
+        document.body.appendChild(area);
+        area.select();
+        document.execCommand('copy');
+        document.body.removeChild(area);
+        resolve();
+      } catch (err) {
+        reject(err);
+      }
+    });
+  }
+
+  document.querySelectorAll('[data-copiar]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var valor = btn.dataset.copiar;
+      var original = btn.textContent;
+
+      copiarTexto(valor).then(function () {
+        btn.textContent = '¡Copiado!';
+      }).catch(function () {
+        btn.textContent = 'Copia manual';
+      }).then(function () {
+        setTimeout(function () { btn.textContent = original; }, 1700);
+      });
+    });
+  });
+
+  /* =========================================================
+     8. BOTÓN VOLVER ARRIBA
+     ========================================================= */
+  var btnArriba = document.getElementById('btnArriba');
+
+  function revisarScroll() {
+    if (!btnArriba) return;
+    if (window.scrollY > 420) {
+      btnArriba.classList.add('visible');
+    } else {
+      btnArriba.classList.remove('visible');
+    }
+  }
+
+  window.addEventListener('scroll', revisarScroll, { passive: true });
+  revisarScroll();
+
+  if (btnArriba) {
+    btnArriba.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* =========================================================
+     9. IMPRIMIR / GUARDAR PDF
+     ========================================================= */
+  var btnImprimir = document.getElementById('btnImprimir');
+  if (btnImprimir) {
+    btnImprimir.addEventListener('click', function () {
+      window.print();
+    });
+  }
+
+  /* =========================================================
+     10. AÑO ACTUAL EN EL PIE
+     ========================================================= */
+  var anio = document.getElementById('anioActual');
+  if (anio) anio.textContent = new Date().getFullYear();
+
+})();
+</script>
+</body>
+</html>
